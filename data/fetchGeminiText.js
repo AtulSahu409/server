@@ -3,7 +3,7 @@ const axios = require('axios');
 async function fetchGeminiText() {
   try {
     const response = await axios.post(
-      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBBaYNq9znVOB8Fk3JeOEo7ZFePbLOTTsg',
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         contents: [
           {
