@@ -1,9 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const textRoute = require('./routes/textRoute');
+require('dotenv').config()
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT 
 
 app.use(cors());
 app.use(express.json());
